@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Consultation | VitaBloom | Health & Wellness</title>
+    <meta
+      name="description"
+      content="Schedule your free consultation with VitaBloom to discuss your wellness goals and find the perfect program for you."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand" aria-label="VitaBloom home">
+          <span class="brand-mark">V</span>
+          <span>VitaBloom</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="about.html">About</a>
+          <a href="programs.html">Programs</a>
+          <a href="services.html">Services</a>
+          <a href="#results">Results</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-light" href="login.html">Log in</a>
+          <a class="btn btn-primary" href="book-consult.html">Book a consult</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="booking-main">
+      <!-- Booking Hero -->
+      <section class="booking-hero">
+        <div class="container booking-hero-content">
+          <h1>Book Your Free Consultation</h1>
+          <p class="lead">
+            Meet with one of our wellness experts to discuss your goals, assess your current
+            health status, and design your personalized wellness plan.
+          </p>
+        </div>
+      </section>
+
+      <!-- Booking Container -->
+      <section class="booking-section">
+        <div class="container">
+          <div class="booking-wrapper">
+            <!-- Booking Form -->
+            <div class="booking-form-container">
+              <div class="form-header">
+                <h2>Schedule Your Consultation</h2>
+                <p>30 minutes • Free • Virtual or In-Person</p>
+              </div>
+
+              <form class="booking-form" action="#" method="POST">
+                <!-- Step 1: Personal Information -->
+                <div class="form-section active" id="step1">
+                  <div class="step-indicator">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Your Information</div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="first-name">First Name *</label>
+                      <input 
+                        type="text" 
+                        id="first-name" 
+                        name="first-name" 
+                        placeholder="John" 
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="last-name">Last Name *</label>
+                      <input 
+                        type="text" 
+                        id="last-name" 
+                        name="last-name" 
+                        placeholder="Doe" 
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="email">Email Address *</label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="john@example.com" 
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone Number *</label>
+                      <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="(555) 123-4567" 
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-navigation">
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                  </div>
+                </div>
+
+                <!-- Step 2: Health Goals -->
+                <div class="form-section" id="step2">
+                  <div class="step-indicator">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Your Goals</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>What are your primary wellness goals? *</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="goals" value="weight-loss" />
+                        Weight Loss & Body Composition
+                      </label>
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="goals" value="strength" />
+                        Build Strength & Muscle
+                      </label>
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="goals" value="energy" />
+                        Increase Energy & Vitality
+                      </label>
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="goals" value="stress" />
+                        Reduce Stress & Anxiety
+                      </label>
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="goals" value="nutrition" />
+                        Better Nutrition & Eating Habits
+                      </label>
+                      <label class="checkbox-label">
+                        <input type="checkbox" name="goals" value="mindfulness" />
+                        Mindfulness & Mental Health
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="experience">Current Fitness Experience *</label>
+                    <select id="experience" name="experience" required>
+                      <option value="">Select your experience level</option>
+                      <option value="beginner">Beginner - New to fitness</option>
+                      <option value="intermediate">Intermediate - Some experience</option>
+                      <option value="advanced">Advanced - Regular workouts</option>
+                      <option value="athlete">Athlete - Competitive level</option>
+                    </select>
+                  </div>
+
+                  <div class="form-navigation">
+                    <button type="button" class="btn btn-outline" onclick="prevStep()">Back</button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                  </div>
+                </div>
+
+                <!-- Step 3: Consultation Type & Timing -->
+                <div class="form-section" id="step3">
+                  <div class="step-indicator">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Schedule</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Preferred Consultation Type *</label>
+                    <div class="radio-group">
+                      <label class="radio-label">
+                        <input type="radio" name="consultation-type" value="virtual" checked />
+                        <span class="radio-content">
+                          <span class="radio-title">Virtual (Video Call)</span>
+                          <span class="radio-desc">Meet via Zoom from anywhere</span>
+                        </span>
+                      </label>
+                      <label class="radio-label">
+                        <input type="radio" name="consultation-type" value="phone" />
+                        <span class="radio-content">
+                          <span class="radio-title">Phone Call</span>
+                          <span class="radio-desc">Quick phone consultation</span>
+                        </span>
+                      </label>
+                      <label class="radio-label">
+                        <input type="radio" name="consultation-type" value="in-person" />
+                        <span class="radio-content">
+                          <span class="radio-title">In-Person</span>
+                          <span class="radio-desc">Visit one of our offices</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="preferred-date">Preferred Date *</label>
+                    <input 
+                      type="date" 
+                      id="preferred-date" 
+                      name="preferred-date" 
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="preferred-time">Preferred Time *</label>
+                    <select id="preferred-time" name="preferred-time" required>
+                      <option value="">Select a time</option>
+                      <option value="09:00">9:00 AM</option>
+                      <option value="09:30">9:30 AM</option>
+                      <option value="10:00">10:00 AM</option>
+                      <option value="10:30">10:30 AM</option>
+                      <option value="11:00">11:00 AM</option>
+                      <option value="11:30">11:30 AM</option>
+                      <option value="14:00">2:00 PM</option>
+                      <option value="14:30">2:30 PM</option>
+                      <option value="15:00">3:00 PM</option>
+                      <option value="15:30">3:30 PM</option>
+                      <option value="16:00">4:00 PM</option>
+                      <option value="16:30">4:30 PM</option>
+                    </select>
+                  </div>
+
+                  <div class="form-navigation">
+                    <button type="button" class="btn btn-outline" onclick="prevStep()">Back</button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                  </div>
+                </div>
+
+                <!-- Step 4: Additional Information -->
+                <div class="form-section" id="step4">
+                  <div class="step-indicator">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Additional Info</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="medical">Any Medical Conditions or Injuries? *</label>
+                    <textarea 
+                      id="medical" 
+                      name="medical" 
+                      rows="4" 
+                      placeholder="e.g., back pain, diabetes, allergies..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="additional">Additional Questions or Comments?</label>
+                    <textarea 
+                      id="additional" 
+                      name="additional" 
+                      rows="4" 
+                      placeholder="Tell us anything else we should know..."
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group checkbox">
+                    <input 
+                      type="checkbox" 
+                      id="agree" 
+                      name="agree" 
+                      required
+                    />
+                    <label for="agree">
+                      I agree to the <a href="#">terms of service</a> and <a href="#">privacy policy</a>
+                    </label>
+                  </div>
+
+                  <div class="form-navigation">
+                    <button type="button" class="btn btn-outline" onclick="prevStep()">Back</button>
+                    <button type="submit" class="btn btn-primary btn-large">Confirm Booking</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Booking Sidebar -->
+            <div class="booking-sidebar">
+              <div class="booking-info">
+                <h3>Consultation Details</h3>
+                
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+                      <path d="M50 25 L50 50 L70 65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="info-label">Duration</p>
+                    <p class="info-value">30 Minutes</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+                      <path d="M25 50 L50 75 L75 25" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="info-label">Cost</p>
+                    <p class="info-value">Completely Free</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M25 40 L75 40 Q80 40 80 45 L80 75 Q80 80 75 80 L25 80 Q20 80 20 75 L20 45 Q20 40 25 40" fill="none" stroke="currentColor" stroke-width="2"/>
+                      <path d="M25 40 L50 55 L75 40" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="info-label">What to Expect</p>
+                    <p class="info-value">Health assessment & personalized plan discussion</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 20 Q70 35 70 50 Q70 70 50 80 Q30 70 30 50 Q30 35 50 20" fill="none" stroke="currentColor" stroke-width="2"/>
+                      <circle cx="50" cy="50" r="8" fill="currentColor"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="info-label">Preparation</p>
+                    <p class="info-value">No prep needed - just bring your enthusiasm!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="booking-benefits">
+                <h3>You'll Get</h3>
+                <ul>
+                  <li>Initial health assessment</li>
+                  <li>Goal clarification</li>
+                  <li>Personalized plan overview</li>
+                  <li>Program recommendations</li>
+                  <li>Special offer & pricing</li>
+                </ul>
+              </div>
+
+              <div class="booking-testimonial">
+                <p class="testimonial-text">
+                  "My consultation was incredibly insightful. The coach listened carefully to my concerns and created a realistic plan I could actually follow."
+                </p>
+                <div class="testimonial-author">
+                  <div class="avatar">SM</div>
+                  <div>
+                    <p class="author-name">Sarah Martinez</p>
+                    <p class="author-role">VitaBloom Member</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>VitaBloom</h4>
+            <p>Personalized wellness for modern living.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <p>hello@vitabloom.com</p>
+            <p>1-800-VITAHEALTH</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 VitaBloom. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    function nextStep() {
+      const currentStep = document.querySelector('.form-section.active');
+      const nextStepId = 'step' + (parseInt(currentStep.id.replace('step', '')) + 1);
+      const nextStep = document.getElementById(nextStepId);
+      
+      if (nextStep) {
+        currentStep.classList.remove('active');
+        nextStep.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function prevStep() {
+      const currentStep = document.querySelector('.form-section.active');
+      const prevStepId = 'step' + (parseInt(currentStep.id.replace('step', '')) - 1);
+      const prevStep = document.getElementById(prevStepId);
+      
+      if (prevStep) {
+        currentStep.classList.remove('active');
+        prevStep.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Form submission
+    document.querySelector('.booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for booking your consultation! We will contact you soon to confirm.');
+      this.reset();
+    });
+  </script>
+</html>
